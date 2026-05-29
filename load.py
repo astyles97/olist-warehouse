@@ -9,14 +9,14 @@ engine = create_engine(os.environ['DATABASE'])
 
 DATA_DIR = Path(__file__).parent / 'data' / 'raw' / 'archive'
 
-customers = pd.read_csv('data/raw/archive/olist_customers_dataset.csv')
-geolocation = pd.read_csv('data/raw/archive/olist_geolocation_dataset.csv')
-order_items = pd.read_csv('data/raw/archive/olist_order_items_dataset.csv')
-order_payments = pd.read_csv('data/raw/archive/olist_order_payments_dataset.csv')
-order_reviews = pd.read_csv('data/raw/archive/olist_order_reviews_dataset.csv')
-orders = pd.read_csv('data/raw/archive/olist_orders_dataset.csv')
-products = pd.read_csv('data/raw/archive/olist_products_dataset.csv')
-product_categories = pd.read_csv('data/raw/archive/product_category_name_translation.csv')
+# customers = pd.read_csv('data/raw/archive/olist_customers_dataset.csv')
+# geolocation = pd.read_csv('data/raw/archive/olist_geolocation_dataset.csv')
+# order_items = pd.read_csv('data/raw/archive/olist_order_items_dataset.csv')
+# order_payments = pd.read_csv('data/raw/archive/olist_order_payments_dataset.csv')
+# order_reviews = pd.read_csv('data/raw/archive/olist_order_reviews_dataset.csv')
+# orders = pd.read_csv('data/raw/archive/olist_orders_dataset.csv')
+# products = pd.read_csv('data/raw/archive/olist_products_dataset.csv')
+# product_categories = pd.read_csv('data/raw/archive/product_category_name_translation.csv')
 
 csv_to_table = {
     'olist_customers_dataset.csv': 'customers',
