@@ -4,3 +4,12 @@ GROUP BY seller_id
 ORDER BY SUM(price) DESC;
 
 #2
+SELECT seller_id, COUNT(active_months) AS months_active
+FROM (
+    SELECT raw.order_items.seller_id, date_trunc('month', raw.orders.order_purchase_timestamp::timestamp) as active_month
+    FROM raw.order_items
+    JOIN raw.orders ON raw.order_items.order_id = raw.orders.order_id
+    GROUP BY raw.order_items.seller_id, active_month
+    ) AS active_months
+GROUP BY seller_id
+ORDER BY months_active DESC;
